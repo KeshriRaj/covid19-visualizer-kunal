@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostvalueService} from "../postvalue.service";
 import { Router } from '@angular/router';
-
+import {ToastrService } from "ngx-toastr";
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   confirmed;
   deaths;
   cured;
-  constructor(private postValue:PostvalueService,private routes:Router) { 
+  constructor(private postValue:PostvalueService,private routes:Router,private toastr:ToastrService) { 
    
 
 }
@@ -29,8 +29,8 @@ export class DashboardComponent implements OnInit {
   }
   logout()
   {
-     console.log("LOGGGGGGGGGGGGGGOUT")
      localStorage.clear();
+     this.toastr.success("Logged Out")
      this.routes.navigate(["/login"]);
   }
 
