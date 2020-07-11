@@ -1,1 +1,59 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div style="height: 745px" class="login-dark">
+        <form [formGroup]="userForm" (submit)="submitForm()">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input class="form-control" type="email" placeholder="Email" formControlName="email"></div>
+            <div class="form-group"><input class="form-control" type="password" placeholder="Password" formControlName="password"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="#" class="forgot">SignUp</a></form>
+    </div>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <------------------------------------------>
+<!-- <form [formGroup]="userForm" (submit)="submitForm()">
+    <h3 class="text-center text-info">Login</h3>
+    <div class="form-group">
+        <label for="username" class="text-info">Username:</label><br>
+        <input style="    border-radius: 5px;
+        width: 285px;" type="text" id ="username" placeholder="Email" formControlName="email">
+    </div>
+    <div class="form-group">
+        <label for="password" class="text-info">Password:</label><br>
+        <input style="    border-radius: 5px;
+        width: 285px;" type="text" id="password" placeholder="Enter Password" formControlName="password">
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+    </div>
+    <div id="register-link" class="text-right">
+    </div>
+</form> -->

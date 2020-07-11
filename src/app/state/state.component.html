@@ -1,0 +1,34 @@
+<!-- <h1><span class="blue">&lt;</span>Table<span class="blue">&gt;</span> <span class="yellow">Responsive</pan></h1> -->
+ 
+    <!-- <h2>Created with love by <a href="http://pablogarciafernandez.com" target="_blank">Pablo García Fernández</a></h2> -->
+<body>
+<br>
+<br>
+    <div class="container">
+        <h1 style="font-weight: 900;">STATEWISE COVID-19 STATUS</h1>
+        <p style="text-align: center;">(Click on states to see its Details)</p>
+
+    </div>
+   
+    <table class="container">
+        <thead>
+            <tr>
+                <th><h1>STATE</h1></th>
+                <th><h1>Confirmed</h1></th>
+                <th><h1>Active</h1></th>
+                <th><h1>Recovered</h1></th>
+                <th><h1>Deceased</h1></th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let data of stateData">
+            <tr>
+                <td style="font-weight:900;"><a (click)="stateDetails(data.statecode)">{{data.state}}</a></td>
+                <td>{{data.confirmed}}</td>
+                <td>{{data.active}}</td>
+                <td>{{data.recovered}}</td>
+                <td>{{data.deaths}}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>

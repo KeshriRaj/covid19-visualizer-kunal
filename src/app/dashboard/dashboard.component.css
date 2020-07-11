@@ -1,0 +1,17 @@
+li{
+ 
+    background-color: blue;
+    border-radius: 5px;
+}
+a{
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.center {
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+  }

@@ -1,0 +1,63 @@
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow">
+    <div class="container">
+        <h1 style="text-align: center;font-weight: bolder;">COVID-19 STATISTICS OF INDIA<img src="./../assets/corona.svg" style="width: 70px;;"></h1>
+    <ul>
+      <li class="nav-item" style="width: 400px;height: 50px;">
+        <a class="nav-link" style="font-weight: 900;" routerLink="/state"><h3>StateWise Table</h3></a>
+      </li>
+    </ul>
+
+</div>
+<button type="button" style="float:right;    margin-top: -16px;" class="btn btn-primary" (click)="logout()">Logout</button>
+
+
+</nav>
+<div class="container">
+    <br>
+    <br>
+    <div class="row">
+    <div class="col-sm">
+    <div class="card text-white bg-info mb-3"  style="max-width: 18rem;border-radius: 25px;">
+    <div class="card-header" style="text-align: center;" ><h3>Active Cases</h3></div>
+    <div class="card-body">
+       <h4 class="card-title" style="text-align: center;">{{confirmed}}</h4>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    </div>
+  </div>
+</div>
+<div class="col-sm">
+  <div class="card text-white bg-success mb-3" style="max-width: 18rem;border-radius: 25px;">
+    <div class="card-header" style="text-align: center;"><h3>Cured/Discharged</h3></div>
+    <div class="card-body">
+      <h4 class="card-title" style="text-align: center;">{{cured}}</h4>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    </div>
+  </div>
+</div>
+<div class="col-sm">
+  <div class="card text-white bg-danger mb-3" style="max-width: 18rem;border-radius: 25px;">
+    <div class="card-header" style="text-align: center;"><h3>Deaths</h3></div>
+    <div class="card-body">
+      <h4 class="card-title" style="text-align: center;">{{deaths}}</h4>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+
+<app-vertical></app-vertical>
+<br>
+<app-line-chart></app-line-chart>
+<br>
+<app-pie></app-pie>
+<br>
+<app-doughnut></app-doughnut>
+<br>
+<app-time-series></app-time-series>
+</body>
