@@ -1,8 +1,10 @@
+
 .login-dark {
     height:1000px;
     background:#475d62 url(../../assets/covid.jpg);
     background-size:cover;
     position:relative;
+    background-repeat: no-repeat;
   }
   
   .login-dark form {
