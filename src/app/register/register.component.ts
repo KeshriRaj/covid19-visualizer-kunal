@@ -32,13 +32,12 @@ export class RegisterComponent implements OnInit {
        console.log("s",res.firstName);
        if(res.message="Registration is Successful")
        {
-        this.toastr.success('Success', 'Login');
+        this.toastr.success('SignedUp');
          this.routes.navigate(["/login"]);
        }
        else{
         this.toastr.error('Signup Failed', '');
        }
-       
      });
    }
   ngOnInit(): void {
