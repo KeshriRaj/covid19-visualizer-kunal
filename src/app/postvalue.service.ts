@@ -17,6 +17,7 @@ export class PostvalueService {
   register(data):Observable<any>{
     return this.http.post("https://zen-user-api.herokuapp.com/users/register",data);
   }
+  //
   getDistrictData():Observable<any>{
     return this.http.get("https://api.covid19india.org/state_district_wise.json");
   }
