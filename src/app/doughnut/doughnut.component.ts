@@ -15,7 +15,7 @@ export class DoughnutComponent implements OnInit {
   arr=[];
   public doughnutChartType = 'doughnut';
   public doughnutChartLegend = true;
-  public doughnutChartLabels = ['Active', 'Confirmed', 'Deaths', 'Recovered'];
+  public doughnutChartLabels = ['Active', 'Confirmed', 'Recovered', 'Deaths'];
   public doughnutChartData = this.arr;
   public x=0;
   public y=0;
@@ -33,15 +33,9 @@ export class DoughnutComponent implements OnInit {
     },
   ];
   constructor(private postValue:PostvalueService,private router:Router) { }
-  // doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla'];
-  // doughnutChartData: MultiDataSet = [
-  //   [55, 25, 20]
-  // ];
-  // doughnutChartType: ChartType = 'doughnut';
   ngOnInit(): void {
     this.postValue.getBarData().subscribe(res=>{
       this.states=Object.values(res.data.statewise);
-      console.log("qfeawdthygj");
       console.log(this.states,typeof(this.states));
       console.log(this.states[0].active);
       for(let i=0;i<this.states.length;i++)
